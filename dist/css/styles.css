@@ -78,7 +78,7 @@ h4 {
 }
 
 p {
-  color: #9698a6;
+  color: dimgray;
 }
 
 h2 {
@@ -303,7 +303,7 @@ a:visited {
   display: block;
   margin: 0.9375rem 0;
   text-align: center;
-  color: #9698a6;
+  color: dimgray;
 }
 
 .header .mobile-menu a:hover {
@@ -311,7 +311,7 @@ a:visited {
 }
 
 .header .menu a {
-  color: #9698a6;
+  color: dimgray;
   position: relative;
   transition: color 300ms ease-in-out;
 }
@@ -532,7 +532,7 @@ a:visited {
 .footer__col a {
   display: block;
   margin-top: .625rem;
-  color: #9698a6;
+  color: dimgray;
 }
 
 .footer__col a:hover {
