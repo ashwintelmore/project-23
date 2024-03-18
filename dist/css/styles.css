@@ -371,7 +371,7 @@ a:visited {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url(/images/backgrndgiveheart5.png);
+  background-image: url("../../images/backgrndgiveheart5.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -542,7 +542,7 @@ a:visited {
 .slider {
   overflow: hidden;
   height: 40rem;
-  /* Inspired by this pen by Pieter Biesemans https://codepen.io/pieter-biesemans/pen/BQBWXX and My Mother Before Me project http://mymotherbeforeme.com/ */
+  position: relative;
   /* hide scrollbar */
 }
 
@@ -694,4 +694,25 @@ a:visited {
 .slider .icon svg {
   width: 50px;
   fill: currentcolor;
+}
+
+.slider #scrollLeft, .slider #scrollRight {
+  position: absolute;
+  z-index: 200;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 20%;
+  border: none;
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+  cursor: pointer;
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.slider #scrollLeft {
+  left: 20px;
+}
+
+.slider #scrollRight {
+  right: 20px;
 }

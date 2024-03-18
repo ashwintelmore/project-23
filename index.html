@@ -759,8 +759,8 @@
       <div class="hero__image"></div>
     </div>
   </section>
-  <div class="external slider">
-    <div class="horizontal-scroll-wrapper ">
+  <div class="external slider ">
+    <div class="horizontal-scroll-wrapper " id="horizontalScroll">
       <div class="img-wrapper slower">
         <a href="#" target="_blank" rel="noopener">
           <img src="./images/sliding/elderly-4169237_1280.jpg" alt="">
@@ -827,7 +827,8 @@
         </a>
       </div>
     </div>
-
+    <button id="scrollLeft" class="">&lt;</button>
+    <button id="scrollRight" class="">&gt;</button>
   </div>
   <section class="features">
     <div class=" container container__for-mobile">
@@ -891,15 +892,15 @@
               become the best they can be. That is one of our missions here. To support deserving youngsters financially
               to reach that dream. There are three (3) degrees we will focus on for them to become: Nurses, Caregivers,
               and IT professionals.</p>
-              
-            </div>
+
           </div>
-          <p> Let us help these Asian countries (Philippines, India, Sri Lanka, etc) produce new graduates for them to
-            have a better future. This will also answer the shortages of these professionals experienced by richer
-            countries like the USA.</p>
-          <p>Think about becoming a sponsor. It will cost less than $5 (US) a day to send one to a nursing school. You
-            can
-            change their lives for a better future.</p>
+        </div>
+        <p> Let us help these Asian countries (Philippines, India, Sri Lanka, etc) produce new graduates for them to
+          have a better future. This will also answer the shortages of these professionals experienced by richer
+          countries like the USA.</p>
+        <p>Think about becoming a sponsor. It will cost less than $5 (US) a day to send one to a nursing school. You
+          can
+          change their lives for a better future.</p>
 
 
       </div>
@@ -1050,10 +1051,34 @@
     const btnhamburger = document.querySelector("#btnhamburger");
     const overlay = document.querySelector(".overlay");
     const fadeElements = document.querySelectorAll(".fade-mode");
+    const horizontalScroll = document.querySelector("#horizontalScroll");
+    const scrollLeft = document.querySelector("#scrollLeft");
+    const scrollRight = document.querySelector("#scrollRight");
 
-    console.log(btnhamburger);
+
+    // function scrollLeft() {
+
+    // }
+
+    scrollLeft.addEventListener("click", function () {
+      console.log(horizontalScroll);
+      horizontalScroll.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    scrollRight.addEventListener("click", function () {
+      console.log( horizontalScroll.offsetWidth);
+      horizontalScroll.scrollTo({
+        top: horizontalScroll.offsetWidth + 1000,
+        behavior: "smooth"
+      });
+    });
+
 
     btnhamburger.addEventListener("click", () => {
+
 
 
       if (header.classList.contains("open")) {
@@ -1075,6 +1100,7 @@
       }
 
     })
+
   </script>
 </body>
 
